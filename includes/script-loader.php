@@ -35,5 +35,10 @@ function sab_inject_global_scripts() {
 		return;
 	}
 
-	// This will be extended in the next steps.
+	$adsense_script = get_option( 'sab_adsense_head_script', '' );
+
+	if ( ! empty( $adsense_script ) ) {
+		echo "\n<!-- Site Ads by Bertuuk: AdSense Script -->\n";
+		echo $adsense_script . "\n";
+	}
 }
