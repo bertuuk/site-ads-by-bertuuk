@@ -1,6 +1,6 @@
 {
   "apiVersion": 3,
-  "name": "site-ads/adsense-banner",
+  "name": "site-ads-by-bertuuk/adsense-banner",
   "title": "AdSense Banner",
   "category": "widgets",
   "icon": "megaphone",
@@ -25,7 +25,7 @@
       "default": true
     }
   },
-  "editorScript": "site-ads-adsense-banner",
+  "editorScript": "site-ads-by-bertuuk/adsense-banner",
   "style": "site-ads-adsense-banner",
   "render": "file:./render.php"
 }

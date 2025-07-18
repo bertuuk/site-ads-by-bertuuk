@@ -16,4 +16,27 @@ require_once __DIR__ . '/script-loader.php';
 require_once __DIR__ . '/visibility.php';
 require_once __DIR__ . '/helpers.php';
 
-// Optionally: init blocks here or in separate file
+// Register block scripts and styles
+function sab_register_adsense_banner_block() {
+	$dir = plugin_dir_path( __DIR__ );
+	$url = plugin_dir_url( __DIR__ );
+
+	wp_register_script(
+		'site-ads-by-bertuuk/adsense-banner',
+		$url . 'assets/adsense-banner.js',
+		[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n', 'wp-components', 'wp-block-editor' ],
+		filemtime( $dir . 'assets/adsense-banner.js' ),
+		true
+	);
+
+	register_block_type(
+		$dir . 'blocks/adsense-banner',
+		[
+			'render_callback' => 'render_adsense_banner_block',
+		]
+	);
+    if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	error_log( '[Site Ads] AdSense Banner block registered' );
+}
+}
+add_action( 'init', 'sab_register_adsense_banner_block' );

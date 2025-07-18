@@ -22,6 +22,9 @@ This plugin allows you to:
 - Full SCSS structure compiled via Webpack
 - Custom tab navigation styled for clean UX
 - Modular architecture
+- Script injection via `<head>` and `wp_body_open`
+- Role-based ad visibility with `has-ads` / `has-no-ads` body classes
+- Central visibility control with `sab_should_show_ads()`
 - Translatable (`Text Domain: site-ads-by-bertuuk`)
 
 ---
@@ -45,6 +48,7 @@ This plugin allows you to:
    In the "Tracking" tab, you can:
    - Enable or disable global script injection
    - Paste your GA4, GTM, or other tracking scripts
+   - Include a `<noscript>` GTM fallback after `<body>` via `wp_body_open`
 
 ---
 
@@ -70,11 +74,13 @@ The compiled files go to `assets/admin.css` and `assets/admin.js`.
 - Tracking script management
 - Webpack + SCSS setup
 
-### 🔜 FASE 2: Script loading & visibility
+### ✅ FASE 2: Script loading & visibility (done)
 - Conditionally load AdSense and tracking scripts
 - Inject `<script>` tags in `<head>` based on settings
-- Role-based visibility logic
-- Detect if Site Kit is active and disable tracking injection if needed
+- Inject GTM `<noscript>` code with `wp_body_open`
+- Role-based visibility logic with `sab_user_can_see_ads()`
+- Add conditional body classes (`has-ads`, `has-no-ads`)
+- Centralize logic with `sab_should_show_ads()`
 
 ### 🔜 FASE 3: Gutenberg blocks
 - Create `adsense-banner` block with attributes:
