@@ -51,3 +51,19 @@ function sab_add_ad_visibility_body_class( $classes ) {
 
 	return $classes;
 }
+
+/**
+ * Determine if ads should be shown to the current user/context.
+ *
+ * Combines all visibility rules in one place.
+ *
+ * @return bool
+ */
+function sab_should_show_ads() {
+	// 👉 Condition 1: user role check
+	if ( ! sab_user_can_see_ads() ) {
+		return false;
+	}
+
+	return true;
+}
