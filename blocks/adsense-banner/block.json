@@ -1,0 +1,31 @@
+{
+  "apiVersion": 3,
+  "name": "site-ads/adsense-banner",
+  "title": "AdSense Banner",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Display a configurable AdSense ad block.",
+  "keywords": ["adsense", "ad", "banner", "advertisement"],
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "adSlot": {
+      "type": "string"
+    },
+    "adFormat": {
+      "type": "string"
+    },
+    "responsive": {
+      "type": "boolean",
+      "default": true
+    },
+    "showOnMobile": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "editorScript": "site-ads-adsense-banner",
+  "style": "site-ads-adsense-banner",
+  "render": "file:./render.php"
+}
