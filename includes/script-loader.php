@@ -36,11 +36,12 @@ function sab_inject_global_scripts() {
 	}
 
 	$adsense_script = get_option( 'sab_adsense_head_script', '' );
-
-	if ( ! empty( $adsense_script ) ) {
-		echo "\n<!-- Site Ads: AdSense Script -->\n";
-		echo $adsense_script . "\n";
-	}
+    if ( sab_should_show_ads() ) {
+        if ( ! empty( $adsense_script ) ) {
+            echo "\n<!-- Site Ads: AdSense Script -->\n";
+            echo $adsense_script . "\n";
+        }
+    }
     // TRACKING SCRIPTS
 	if ( get_option( 'sab_enable_tracking_scripts', false ) ) {
 		$ga4   = get_option( 'sab_tracking_ga4', '' );
