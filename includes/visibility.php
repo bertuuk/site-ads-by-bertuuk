@@ -33,3 +33,21 @@ function sab_user_can_see_ads() {
 
 	return true;
 }
+
+add_filter( 'body_class', 'sab_add_ad_visibility_body_class' );
+
+/**
+ * Add ad visibility class to <body>.
+ *
+ * @param array $classes Existing body classes.
+ * @return array Modified body classes.
+ */
+function sab_add_ad_visibility_body_class( $classes ) {
+	if ( sab_user_can_see_ads() ) {
+		$classes[] = 'has-ads';
+	} else {
+		$classes[] = 'has-no-ads';
+	}
+
+	return $classes;
+}
