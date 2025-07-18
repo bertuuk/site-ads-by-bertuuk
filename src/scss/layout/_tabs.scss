@@ -2,21 +2,40 @@
 
 .sab-tabs {
   margin-top: 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 4px;
+
 
   .nav-tab {
-    padding: 8px 14px;
-    font-size: 14px;
+    padding: 8px 12px;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: #f1f1f1;
+    color: #555;
+    
+  }
+
+  .nav-tab:hover {
+    background: #fafafa;
   }
 
   .nav-tab-active {
-    background-color: $color-accent;
-    color: #fff;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    color: #000;
+    font-weight: 600;
   }
 }
 
 .sab-tab-content {
+  margin-top: 0;
   padding: 20px;
-  background: $color-background;
-  border: 1px solid $color-border;
+  background: #fff;
+  border: 1px solid #ccc;
   border-top: none;
 }

@@ -3,17 +3,33 @@
   \**************************************************************************************************************/
 .sab-tabs {
   margin-top: 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 4px;
 }
 .sab-tabs .nav-tab {
-  padding: 8px 14px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: #f1f1f1;
+  color: #555;
+}
+.sab-tabs .nav-tab:hover {
+  background: #fafafa;
 }
 .sab-tabs .nav-tab-active {
-  background-color: #007cba;
-  color: #fff;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  color: #000;
+  font-weight: 600;
 }
 
 .sab-tab-content {
+  margin-top: 0;
   padding: 20px;
   background: #fff;
   border: 1px solid #ccc;
