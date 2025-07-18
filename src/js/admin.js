@@ -1,0 +1,1 @@
+console.log('Site Ads admin JS loaded');
