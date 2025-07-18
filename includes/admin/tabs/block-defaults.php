@@ -32,7 +32,6 @@ function sab_render_tab_block_defaults()
         'rectangle' => 'Rectangle',
         'horizontal' => 'Horizontal',
         'vertical'  => 'Vertical',
-        'link'      => 'Link (deprecated)',
         'fluid'     => 'Fluid (responsive)',
         'native'    => 'Native',
     ];

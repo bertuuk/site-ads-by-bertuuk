@@ -35,6 +35,11 @@ function sab_render_tab_tracking_content() {
 	echo '<td><textarea name="sab_tracking_gtm" id="sab_tracking_gtm" class="large-text code" rows="5">' . esc_textarea( get_option( 'sab_tracking_gtm' ) ) . '</textarea>';
 	echo '<p class="description">' . esc_html__( 'Paste the GTM container script. This will also be injected into the <head>.', 'site-ads-by-bertuuk' ) . '</p></td></tr>';
 
+    // GTM noscript (body)
+    echo '<tr><th scope="row"><label for="sab_tracking_gtm_body">' . esc_html__( 'Google Tag Manager (noscript)', 'site-ads-by-bertuuk' ) . '</label></th>';
+    echo '<td><textarea name="sab_tracking_gtm_body" id="sab_tracking_gtm_body" class="large-text code" rows="5">' . esc_textarea( get_option( 'sab_tracking_gtm_body' ) ) . '</textarea>';
+    echo '<p class="description">' . esc_html__( 'Paste the <noscript> GTM iframe snippet here. It will be injected immediately after the <body> tag.', 'site-ads-by-bertuuk' ) . '</p></td></tr>';
+        
 	// Extra scripts
 	echo '<tr><th scope="row"><label for="sab_tracking_extra">' . esc_html__( 'Other Scripts (Hotjar, etc.)', 'site-ads-by-bertuuk' ) . '</label></th>';
 	echo '<td><textarea name="sab_tracking_extra" id="sab_tracking_extra" class="large-text code" rows="5">' . esc_textarea( get_option( 'sab_tracking_extra' ) ) . '</textarea>';
