@@ -1,0 +1,22 @@
+@use '../base' as *;
+
+.sab-tabs {
+  margin-top: 20px;
+
+  .nav-tab {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .nav-tab-active {
+    background-color: $color-accent;
+    color: #fff;
+  }
+}
+
+.sab-tab-content {
+  padding: 20px;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-top: none;
+}
