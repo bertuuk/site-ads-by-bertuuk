@@ -13,6 +13,7 @@ function sab_render_settings_page() {
 
 	$tabs = [
 		'ads'      => __( 'Ads', 'site-ads-by-bertuuk' ),
+        'block-defaults' => __( 'Block Defaults', 'site-ads-by-bertuuk' ),
 		'tracking' => __( 'Tracking', 'site-ads-by-bertuuk' ),
 	];
 

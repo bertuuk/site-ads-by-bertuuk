@@ -46,4 +46,6 @@ function sab_render_tab_ads_content()
     submit_button(__('Save Ad Settings', 'site-ads-by-bertuuk'));
 
     echo '</form>';
+
+    
 }
